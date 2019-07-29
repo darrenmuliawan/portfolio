@@ -4,14 +4,94 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MP1 Starter</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title> Darren's Portfolio </title>
 </head>
 
 <body>
+  <div class="page">
+    <div class="menu">
+      <a id="logo"> myPortfolio </a>
+      <a href="#header-page" class="menu-options" id="menu-home"> Home </a>
+      <a href="#carousel-page" class="menu-options" id="menu-about"> About Me </a>
+      <a href="#projects-page" class="menu-options" id="menu-projects"> Projects </a>
+      <a href="#resume-page" class="menu-options" id="menu-resume"> Resume </a>
+    </div>
+    <div class="sections">
+      <!-- Home -->
+      <div class="section header" id="header-page">
+        <div class="header-text"> Hello World! My name is Darren Muliawan. </div>
+        <video loop autoplay muted>
+          <source src="assets/hello_world.webm" type="video/webm">
+          <source src="assets/hello_world.mp4" type="video/mp4">
+          <source src="assets/hello_world.ogg" type="video/ogg">
+          Your browser doesn't support HTML5 video.
+        </video>
+      </div>
 
-    <h2>Welcome to MP1!</h2>
+      <!-- Carousel container -->
+      <div class="carousel" id="carousel-page">
+        <div class="carousel-text fade"> A Computer Science & Statistic recent graduate who is currently seeking for full-time job opportunity </div>
+        <div class="carousel-text fade"> Experienced in C, C++, Java, Python, R, SQL, HTML5, CSS, Javascript, React.js, Node.js, Express, and MongoDB </div>
+        <div class="carousel-text fade"> Interested to become either Software Engineer, Full-stack Developer, Android Developer, Data Analyst, or Data Scientist </div>
+        <a id="prev">&#10094;</a>
+        <a id="next">&#10095;</a>
+      </div>
 
-    <script src="bundle.js" type="text/javascript"></script>
+      <!-- Project Container-->
+      <div class="section project-1" id="projects-page">
+        <p> </p>
+        <i class="fas fa-search fa-2x" class="fontAwesomeProject"></i>
+        <a href="http://darrenmuliawan.github.io/LostAndFound/" class="link-project"> Lost and Found </a>
+        <p class="project-description">
+          Create a Full Stack Web application for Lost and Found using React.js, Node.js, Express, and MongoDB
+        </p>
+      </div>
+      <div class="section project-2">
+        <p> </p>
+        <i class="fas fa-gamepad fa-2x" class="fontAwesomeProject"></i>
+        <p class="project-title"> Who Will Carry? </p>
+        <p class="project-description">
+          Use R and Shiny to show the performances of professional players in League of Legends
+        </p>
+      </div>
+      <div class="section project-3">
+        <p> </p>
+        <i class="fas fa-basketball-ball fa-2x" class="fontAwesomeProject"></i>
+        <a href="http://materialistic-pickle.surge.sh/" class="link-project"> NCAA Player Invest </a>
+        <p class="project-description">
+          Create a Web application where the user can invest in NCAA fantasy player to get the highest score in the leaderboard
+        </p>
+      </div>
+
+      <!-- Resume Container-->
+      <div class="section last">
+        <div class="resume" id="resume-page">
+          <p> Web Design.
+            <br/> Software Engineer.
+            <br/> Mobile Applications.
+            <br/> Photography.
+            <br/> Music. </p>
+          <div class="resume-div">
+            <a id="resume-button" href="assets/resume.pdf" download> VIEW MY RESUME &rarr;</a>
+          </div>
+        </div>
+        <div class="section footer">
+          <hr>
+          <a href="https://www.facebook.com/darren.muliawan" class="icon"><i class="fab fa-facebook fa-2x" id="fbicon"></i></a>
+          <a href="https://www.instagram.com/darren.muliawan/" class="icon"><i class="fab fa-instagram fa-2x" id="igicon"></i></a>
+          <a href="https://www.linkedin.com/in/darren-muliawan" class="icon"><i class="fab fa-linkedin fa-2x" id="linkedicon"></i></a>
+          <a href="https://github.com/darrenmuliawan" class="icon"><i class="fab fa-github-square fa-2x"></i></a>
+          <hr>
+        </div>
+      </div>
+    <div>
+  </div>
+  <script src="bundle.js" type="text/javascript"></script>
+
 </body>
 
 </html>

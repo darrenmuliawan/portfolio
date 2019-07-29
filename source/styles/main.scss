@@ -86,12 +86,12 @@ body {
   font-weight: $font-weight;
   display: flex;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
 }
 
 .section {
   @extend %item;
-  height: $height-section;
+  height: 100vh;
 }
 
 a.menu-options {
@@ -127,7 +127,7 @@ a.menu-options {
   }
   @include for-size(desktop-up) {
     font-size: $menu-font-size;
-    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr 0.25fr;
+    grid-template-columns: 5fr 1fr 1fr 1fr 1fr 0.25fr;
     grid-template-rows: 1fr 3fr 1fr;
   }
   position: fixed;
@@ -173,12 +173,7 @@ a.menu-options {
   @extend %item-header;
   background-color: $color-black;
   font-family: $font-home;
-  @include for-size(phone-only) {
-    height: $height-section-lg;
-  }
-  @include for-size(tablet-up) {
-    height: $height-section-lg;
-  }
+  height: 100vh;
   @include for-size(desktop-up) {
     grid-template-columns: 0fr 1fr;
   }
@@ -234,17 +229,18 @@ video {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: $font-family;
+  height: 100vh;
   //background-color: $color-green;
   @include for-size(phone-only) {
-    height: $height-section-lg;
+    //height: $height-section-lg;
     font-size: $font-size-sm;
   }
   @include for-size(tablet-up) {
-    height: $height-section-lg;
+    //height: $height-section-lg;
   }
   @include for-size(desktop-up) {
     width: 100%;
-    height: $height-section-xl;
+    //height: $height-section-xl;
     //order: 0;
   }
   order: 2;
@@ -305,18 +301,26 @@ video {
   transform: scale(1.5);
 }
 
+.last {
+  @extend %item;
+  display: grid;
+  grid-template-rows: 85% 15%;
+  //width: 100%;
+  order: 4;
+}
+
 .contact {
   background-color: $color-white;
   color: $color-black;
   font-size: $font-size-xl;
-  height: $height-section-lg;
+  height: 20vh;
   @include for-size(phone-only) {
     font-size: $font-size;
   }
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 5fr 2fr;
   align-items: center;
-  justify-content: center;
+  //justify-content: center;
   text-align: center;
   //@include for-size(desktop-up) { order: 2; }
   order: 5;
@@ -331,10 +335,6 @@ video {
   padding-bottom: 50px;
 }
 
-.footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
 
 .contact-form {
   @include for-size(tablet-up) {
@@ -344,7 +344,7 @@ video {
   }
   font-size: $font-size;
   display: flex;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
@@ -385,9 +385,15 @@ input[type=text] {
   width: 100%;
   height: $height-footer;
   display: grid;
-  grid-template-columns: 4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 4fr;
+  grid-template-columns: 5fr 1fr 1fr 1fr 1fr 5fr;
 }
 
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
 .fab {
   @include for-size(phone-only) {
     font-size: $font-size-lg;
@@ -411,7 +417,7 @@ input[type=text] {
 
 %project {
   background-color: $color-white;
-  height: $height-section-project;
+  height: 100vh;
   @include for-size(tablet-up) { width: 100%; }
   @include for-size(desktop-up) { width: 33.3333%; }
   order: 3;
@@ -478,23 +484,24 @@ input[type=text] {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: $font-home;
+  height: 100%;
+  width: 100%;
   @include for-size(phone-only) {
     font-size: $font-size;
   }
   @include for-size(tablet-up) {
-    width: 100%;
-    height: $height-section-xl;
+    //width: 100%;
+    //height: $height-section-xl;
     //order: 0;
   }
   color: $color-black;
-  font-size: $font-size-xxl;
+  font-size: $font-size-lg;
   font-style: bold;
   display: grid;
   grid-template-rows: 10fr 6fr;
   text-align: center;
-  justify-content: center;
+  //justify-content: center;
   align-items: center;
-  order: 4;
 }
 
 #resume-button {
