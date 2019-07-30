@@ -18,7 +18,7 @@ $color-light-grey: #f1f1f1;
 
 
 // Heights
-$height-menu: 50px;
+$height-menu: 20px;
 $height-footer: 60px;
 $height-section: 300px;
 $height-section-sm: 200px;
@@ -423,16 +423,22 @@ input[type=text] {
   order: 3;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .project-1, .project-2, .project-3 {
   @extend %project;
   background-color: $color-white;
   color: $color-black;
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr 4fr;
+  grid-template-rows: 1fr 2fr 2fr 4fr 4fr;
   text-align: center;
   font-size: $font-size-med;
   padding-left: 15px;
   padding-right: 15px;
+
   @include for-size(phone-only) {
     font-size: $font-size;
     border-top-style: solid;
